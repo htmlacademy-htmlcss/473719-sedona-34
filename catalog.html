@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
   <title>HTML Academy: Седона</title>
 </head>
 
@@ -22,7 +23,7 @@
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item navigation-item-current">
-            <a class="navigation-link" href="catalog.html">Гостиница</a>
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-user-list">
@@ -36,7 +37,7 @@
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-item navigation-modal-button">
             <a class="navigation-button open-modal-btn" href="#">Хочу сюда!</a>
           </li>
         </ul>
@@ -65,7 +66,7 @@
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <div class="filter-wrapper">
             <fieldset class="catalog-filter-group catalog-filter-infrastructure">
-              <legend class="catalog-filter-title">Инфраструктуры</legend>
+              <legend class="catalog-filter-title">Инфраструктура:</legend>
               <label class="control-element">
                 <input class="visually-hidden control-input" type="checkbox" name="pools-on" checked>
                 <span class="control-mark"></span>
@@ -84,31 +85,31 @@
                 <input class="visually-hidden control-input" type="checkbox" name="wifi-on">
                 <span class="control-mark"></span>
                 <span class="control-label">
-                  Wi-fi
+                  Wi-Fi
                 </span>
               </label>
             </fieldset>
             <fieldset class="catalog-filter-group catalog-filter-house-type">
-              <legend class="catalog-filter-title">Тип жилья</legend>
+              <legend class="catalog-filter-title">Тип Жилья:</legend>
               <label class="control-element">
                 <input class="visually-hidden control-input" type="radio" name="places" value="hotels-on" checked>
                 <span class="control-mark"></span>
                 <span class="control-label">
-                  Гостиницы
+                  Гостиница
                 </span>
               </label>
               <label class="control-element">
                 <input class="visually-hidden control-input" type="radio" name="places" value="motels-on">
                 <span class="control-mark"></span>
                 <span class="control-label">
-                  Мотели
+                  Мотель
                 </span>
               </label>
               <label class="control-element">
                 <input class="visually-hidden control-input" type="radio" name="places" value="appartements-on">
                 <span class="control-mark"></span>
                 <span class="control-label">
-                  Аппартаменты
+                  Апартаменты
                 </span>
               </label>
             </fieldset>
@@ -116,12 +117,12 @@
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <div class="price-range-input">
                 <label class="range-input-labels">
-                  <input class="range-input-min" type="number" value="0" name="price-min">
-                  <span class="visually-hidden">от</span>
+                  <input class="range-input-min" type="text" placeholder="0" name="price-min">
+                  <span class="range-min-description">от</span>
                 </label>
                 <label class="range-input-labels">
-                  <input class="range-input-max" type="number" value="9000" name="prince-max">
-                  <span class="visually-hidden">до</span>
+                  <input class="range-input-max" type="text" placeholder="9000" name="prince-max">
+                  <span class="range-max-description">до</span>
                 </label>
               </div>
               <div class="range">
@@ -148,9 +149,9 @@
         <h2 class="visually-hidden">Сортировка гостинц</h2>
         <p class="filtered-quantity">Найдено гостиниц: 38</p>
         <select class="filter-select" aria-label="Сортировка">
-          <option value="cheap">Сначала дешёвое</option>
-          <option value="popular">Сначала популярное</option>
-          <option value="expensive">Сначала дорогое</option>
+          <option value="cheap">Сначала дешевые</option>
+          <option value="popular">Сначала популярные</option>
+          <option value="expensive">Сначала дорогие</option>
         </select>
         <ul class="way-to-demonstrate-list">
           <li class="way-to-demonstrate-item">
@@ -210,7 +211,7 @@
             <p class="product-type">Гостиница</p>
             <p class="product-price">От 5000 ₽</p>
             <a class="button-about" href="#">подробнее</a>
-            <button class="button-favorite button-added-to-favorite" type="button">в избранное</button>
+            <button class="button-favorite button-added-to-favorite" type="button">в избранном</button>
             <span class="stars-quantity four-star-class"></span>
             <span class="visually-hidden">Отель четыре звезды</span>
             <p class="rating-caption">Рейтинг: 9,2</p>
